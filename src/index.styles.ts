@@ -21,3 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 `;
+
+export default {
+  GlobalStyles,
+};

@@ -1,13 +1,18 @@
+import React from 'react';
 import logo from './logo.svg';
-import {AppWrap, PageWrap, Logo} from './App.styles';
+import { AppWrap, PageWrap, Logo } from './App.styles';
 
-function App() {
+function App(): JSX.Element {
   return (
     <AppWrap>
       <header>
         <Logo src={logo} alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit
+          {' '}
+          <code>src/App.tsx</code>
+          {' '}
+          and save to reload.
         </p>
         <a
           href="https://reactjs.org"
