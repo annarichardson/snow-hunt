@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {GlobalStyles} from './index.styles';
+import { GlobalStyles } from './index.styles';
 import App from './views/App/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +9,7 @@ ReactDOM.render(
     <GlobalStyles />
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
