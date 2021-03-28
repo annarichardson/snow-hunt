@@ -34,6 +34,7 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/ban-types': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': [
       1,
@@ -42,6 +43,9 @@ module.exports = {
     camelcase: 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    'react/static-property-placement': 'off',
   },
   settings: {
     'import/resolver': {
