@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import { WHITE } from './utils/colors';
+import Colors from './utils/theme';
 
 export const GlobalStyles = createGlobalStyle`
   html {
-    background-color: ${WHITE};
+    background-color: ${Colors.white};
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;

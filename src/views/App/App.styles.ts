@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { NAVY_BLUE, WHITE } from '../../utils/colors';
+import Colors from '../../utils/theme';
 
 export const AppWrap = styled.div`
-  background-color: ${WHITE};
-  color: ${NAVY_BLUE};
+  background-color: ${Colors.white};
+  color: ${Colors.navyBlue};
   height: 100%;
   position: relative;
   text-align: center;
