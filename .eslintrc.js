@@ -46,6 +46,7 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'react/static-property-placement': 'off',
+    'class-methods-use-this': 'off',
   },
   settings: {
     'import/resolver': {
