@@ -81,11 +81,11 @@ class QuizForm extends React.PureComponent<QuizFormProps, QuizFormState> {
     });
   }
 
-  scrollToSection = (el: React.RefObject<any>) => {
+  scrollToSection = (el: React.RefObject<HTMLDivElement>) => {
     if (!el) return;
 
     setTimeout(() => {
-      el.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 500);
   }
 
