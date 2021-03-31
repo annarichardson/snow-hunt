@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 import Icon from '../Icon/Icon';
-import { NAVY_BLUE } from '../../utils/colors';
+import Colors from '../../utils/theme';
+
+export const LogoWrap = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+`;
 
 export const Text = styled.h1`
-  color: ${NAVY_BLUE};
+  color: ${Colors.navyBlue};
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   letter-spacing: 2px;
@@ -11,15 +17,9 @@ export const Text = styled.h1`
 `;
 
 export const Snowflake = styled(Icon)`
-  color: ${NAVY_BLUE};
+  color: ${Colors.navyBlue};
   height: 27px;
   margin-left: 10px;
   margin-right: 10px;
   width: 27px;
-`;
-
-export const LogoWrap = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
 `;

@@ -6,6 +6,7 @@ import Logo from '../Logo/Logo';
 import {
   CenterWrap,
   LeftWrap,
+  LogoButton,
   NavBarWrap,
   RightWrap,
 } from './NavBar.styles';
@@ -17,6 +18,19 @@ type NavBarProps = {
 };
 
 class NavBar extends React.PureComponent<NavBarProps> {
+  logoRef: React.RefObject<Logo>= React.createRef();
+
+  componentDidUpdate(prevProps: NavBarProps) {
+    const { location } = this.props;
+    if (location !== prevProps.location) {
+      this.onRouteChanged();
+    }
+  }
+
+  onRouteChanged = () => {
+    this.logoRef.current?.animateSnowflake();
+  }
+
   clickLogo = () => {
     const { history: { push } } = this.props;
     push('/');
@@ -28,7 +42,9 @@ class NavBar extends React.PureComponent<NavBarProps> {
       <NavBarWrap>
         <LeftWrap />
         <CenterWrap>
-          <Logo />
+          <LogoButton type="button" onClick={this.clickLogo}>
+            <Logo ref={this.logoRef} />
+          </LogoButton>
         </CenterWrap>
         <RightWrap />
       </NavBarWrap>
