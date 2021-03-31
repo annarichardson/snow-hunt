@@ -71,8 +71,6 @@ class Results extends React.PureComponent<ResultsProps> {
       subText = '';
     }
 
-    console.log(resortList);
-
     return (
       <InView triggerOnce>
         {({ inView, ref }) => (
