@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { store } from '../../store';
+import NotFound from '../NotFound/NotFound';
 import Quiz from '../Quiz/Quiz';
 import NavBar from '../../components/NavBar/NavBar';
 import { AppWrap, PageWrap } from './App.styles';
@@ -21,6 +22,9 @@ function App(): JSX.Element {
             <Switch>
               <Route exact path="/">
                 <Quiz />
+              </Route>
+              <Route>
+                <NotFound />
               </Route>
             </Switch>
           </PageWrap>
