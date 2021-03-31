@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import {AppWrap, PageWrap, Logo} from './App.styles';
+import React from 'react';
+import { Provider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-function App() {
+import { store } from '../../store';
+import NotFound from '../NotFound/NotFound';
+import Quiz from '../Quiz/Quiz';
+import NavBar from '../../components/NavBar/NavBar';
+import { AppWrap, PageWrap } from './App.styles';
+
+function App(): JSX.Element {
   return (
-    <AppWrap>
-      <header>
-        <Logo src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <PageWrap />
-    </AppWrap>
+    <Provider store={store}>
+      <Router>
+        <AppWrap>
+          <NavBar />
+          <PageWrap>
+            <Switch>
+              <Route exact path="/">
+                <Quiz />
+              </Route>
+              <Route>
+                <NotFound />
+              </Route>
+            </Switch>
+          </PageWrap>
+        </AppWrap>
+      </Router>
+    </Provider>
   );
 }
 
