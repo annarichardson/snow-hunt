@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as SnowflakeIcon } from '../../assets/icons/snowflake.svg';
-import { NAVY_BLUE } from '../../utils/colors';
+import Colors from '../../utils/theme';
 
 export enum IconTypes {
   SNOWFLAKE = 'SNOWFLAKE',
@@ -15,7 +15,7 @@ type IconProps = {
 export class Icon extends React.Component<IconProps> {
   static defaultProps = {
     className: '',
-    fill: NAVY_BLUE,
+    fill: Colors.navyBlue,
   };
 
   static assets = {
